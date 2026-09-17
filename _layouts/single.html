@@ -19,6 +19,25 @@ layout: default
   {% endunless %}
 {% endif %}
 
+{%- comment -%}
+  Indice (TOC) automatico e universale: nessun flag manuale nel front-matter.
+  Conta gli heading H2 nel contenuto HTML gia renderizzato; se sono 3 o piu,
+  attiva il TOC nativo del tema esattamente come farebbe toc: true a mano.
+  Calcolato qui (fuori da qualsiasi if) cosi il valore e sempre disponibile.
+  page.toc: false nel front-matter resta una scappatoia per disattivarlo a mano.
+{%- endcomment -%}
+{% assign h2_matches = content | split: '<h2' %}
+{% assign h2_count = h2_matches.size | minus: 1 %}
+{% if page.toc == false %}
+  {% assign page_toc = false %}
+{% elsif page.toc == true %}
+  {% assign page_toc = true %}
+{% elsif h2_count >= 3 %}
+  {% assign page_toc = true %}
+{% else %}
+  {% assign page_toc = false %}
+{% endif %}
+
 <div id="main" role="main">
   {% include sidebar.html locale=locale %}
 
@@ -40,23 +59,8 @@ layout: default
         </header>
       {% endunless %}
 
-      {%- comment -%}
-        Indice (TOC) automatico e universale: nessun flag manuale nel front-matter.
-        Conta gli heading H2 markdown (##) nel contenuto grezzo del post/pagina;
-        se sono 3 o piu, mostra il TOC nativo del tema. Vale per qualsiasi articolo
-        (esistente o futuro) su qualsiasi layout "single" del sito.
-        page.toc: false nel front-matter forza comunque la disattivazione (escape hatch).
-      {%- endcomment -%}
-      {% assign h2_count = content | split: '<h2' | size | minus: 1 %}
-      {% assign show_toc = false %}
-      {% if page.toc == false %}
-        {% assign show_toc = false %}
-      {% elsif page.toc == true or h2_count >= 3 %}
-        {% assign show_toc = true %}
-      {% endif %}
-
       <section class="page__content e-content" itemprop="text">
-        {% if show_toc %}
+        {% if page_toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc" aria-label="Table of contents">
               <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'list' }}"></i> {{ page.toc_label | default: site.data.ui-text[locale].toc_label | default: "Indice" }}</h4></header>
@@ -97,3 +101,5 @@ layout: default
     {% include page__related.html locale=locale posts=related_limited %}
   {% endif %}
 </div>
+
+{%- comment -%} DEBUG: h2_count={{ h2_count }} page_toc={{ page_toc }} {%- endcomment -%}
