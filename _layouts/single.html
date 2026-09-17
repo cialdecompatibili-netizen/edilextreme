@@ -21,18 +21,22 @@ layout: default
 
 {%- comment -%}
   Indice (TOC) automatico e universale: nessun flag manuale nel front-matter.
-  Conta gli heading H2 nel contenuto HTML gia renderizzato; se sono 3 o piu,
-  attiva il TOC nativo del tema esattamente come farebbe toc: true a mano.
-  Calcolato qui (fuori da qualsiasi if) cosi il valore e sempre disponibile.
-  page.toc: false nel front-matter resta una scappatoia per disattivarlo a mano.
+  Conta gli heading H2+H3 nel contenuto HTML gia renderizzato (gli articoli
+  usano tipicamente 1 H2 principale + piu sottotitoli H3); se il totale e
+  3 o piu, attiva il TOC nativo del tema esattamente come farebbe toc: true
+  a mano. page.toc: false nel front-matter resta una scappatoia per
+  disattivarlo a mano, page.toc: true forza l'attivazione anche sotto soglia.
 {%- endcomment -%}
 {% assign h2_matches = content | split: '<h2' %}
 {% assign h2_count = h2_matches.size | minus: 1 %}
+{% assign h3_matches = content | split: '<h3' %}
+{% assign h3_count = h3_matches.size | minus: 1 %}
+{% assign heading_count = h2_count | plus: h3_count %}
 {% if page.toc == false %}
   {% assign page_toc = false %}
 {% elsif page.toc == true %}
   {% assign page_toc = true %}
-{% elsif h2_count >= 3 %}
+{% elsif heading_count >= 3 %}
   {% assign page_toc = true %}
 {% else %}
   {% assign page_toc = false %}
@@ -101,5 +105,3 @@ layout: default
     {% include page__related.html locale=locale posts=related_limited %}
   {% endif %}
 </div>
-
-{%- comment -%} DEBUG: h2_count={{ h2_count }} page_toc={{ page_toc }} {%- endcomment -%}
