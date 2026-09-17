@@ -9,5 +9,7 @@ main:
     url: /shop/
   - title: "Servizi"
     url: /servizi/
+  - title: "Lavori svolti"
+    url: #
   - title: "Changelog"
     url: /changelog/
