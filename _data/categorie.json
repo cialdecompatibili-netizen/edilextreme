@@ -4,15 +4,7 @@
     "descrizione": "Articoli tecnici, guide e tutorial"
   },
   {
-    "nome": "fashion",
-    "descrizione": "gay model"
-  },
-  {
-    "nome": "mauritius",
-    "descrizione": "descrizione categoria mauritius"
-  },
-  {
-    "nome": "test-api",
-    "descrizione": "Categoria di test creata via script API"
+    "nome": "servizi",
+    "descrizione": "Approfondimenti sui servizi offerti: lavori in fune, impermeabilizzazioni, manutenzioni"
   }
 ]
