@@ -8,6 +8,6 @@ main:
   - title: "Shop!"
     url: /shop/
   - title: "Servizi"
-    url: /about/
+    url: /servizi/
   - title: "Changelog"
     url: /changelog/

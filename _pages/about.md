@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "About"
-permalink: /about/
+title: "Servizi"
+permalink: /servizi/
 author_profile: true
 ---
 
