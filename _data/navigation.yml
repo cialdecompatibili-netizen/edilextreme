@@ -1,15 +1,13 @@
 main:
   - title: "Home"
     url: /
-  - title: "Preventivo"
-    url: /#pricing
+  - title: "Lavori svolti"
+    url: #
   - title: "Blog"
     url: /blog/
   - title: "Shop!"
     url: /shop/
+  - title: "Contatti"
+    url: /#pricing
   - title: "Servizi"
     url: /servizi/
-  - title: "Lavori svolti"
-    url: #
-  - title: "Changelog"
-    url: /changelog/
