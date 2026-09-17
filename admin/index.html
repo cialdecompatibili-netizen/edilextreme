@@ -505,6 +505,24 @@ textarea.sm{min-height:180px;font-family:'Courier New',monospace;font-size:13px;
         <div class="msg" id="msg-ga4"></div>
       </div>
 
+      <!-- SITEMAP -->
+      <div class="card">
+        <div class="card-title">🗺️ Sitemap</div>
+        <div style="font-size:12px;color:#888;margin-bottom:14px">Generata automaticamente da Jekyll (plugin jekyll-sitemap) ad ogni pubblicazione — nessuna configurazione richiesta.</div>
+        <div class="field">
+          <label>URL sitemap</label>
+          <div style="display:flex;gap:8px">
+            <input type="text" id="sitemap-url" readonly style="flex:1;background:#f5f5f5;color:#555;font-size:12px">
+            <button class="btn btn-secondary btn-sm" onclick="copiaSitemapUrl()">📋 Copia</button>
+          </div>
+        </div>
+        <div class="btn-group">
+          <a id="sitemap-open-link" href="#" target="_blank" class="btn btn-secondary">↗ Apri sitemap</a>
+          <a href="https://search.google.com/search-console" target="_blank" class="btn btn-secondary">↗ Invia a Search Console</a>
+        </div>
+        <div class="msg" id="msg-sitemap"></div>
+      </div>
+
       <!-- SEARCH CONSOLE -->
       <div class="card">
         <div class="card-title">🔍 Google Search Console</div>
@@ -729,7 +747,18 @@ const REPO=detectRepo();
   document.getElementById('topbar-site-link').href=base;
   document.getElementById('topbar-admin-link').href=base+'admin/';
   document.getElementById('topbar-deploy-link').href=`https://github.com/${REPO}/actions`;
+  // Sitemap (pannello Integrazioni) — stesso base dinamico, zero hardcode repo
+  const sitemapUrl=base+'sitemap.xml';
+  const sInput=document.getElementById('sitemap-url');
+  const sLink=document.getElementById('sitemap-open-link');
+  if(sInput)sInput.value=sitemapUrl;
+  if(sLink)sLink.href=sitemapUrl;
 })();
+function copiaSitemapUrl(){
+  const url=document.getElementById('sitemap-url').value;
+  navigator.clipboard.writeText(url).then(()=>showMsg('msg-sitemap','✅ Copiato negli appunti!','ok'))
+    .catch(()=>showMsg('msg-sitemap','❌ Copia manuale non riuscita.','err'));
+}
 // STATO GLOBALE
 let _categorie=[];let _catSha=null;
 let _menuVoci=[];let _menuSha=null;
