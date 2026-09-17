@@ -13,7 +13,7 @@ Zero permessi comunali per il ponteggio, zero ingombro a terra, zero disagi per 
 
 ## I nostri servizi
 
-### Impermeabilizzazioni e protezione dall'acqua
+## Impermeabilizzazioni e protezione dall'acqua
 
 **[Impermeabilizzazione su fune](#)** — Interventi di impermeabilizzazione di terrazzi, balconi, tetti e cornicioni con guaine bituminose e liquide, per fermare le infiltrazioni prima che danneggino le strutture in profondita.
 
@@ -21,7 +21,7 @@ Zero permessi comunali per il ponteggio, zero ingombro a terra, zero disagi per 
 
 **[Montaggio isolanti](#)** — Applicazione di isolanti termici e acustici su facciate e coperture, per migliorare l'efficienza energetica dell'edificio senza cantieri invasivi.
 
-### Manutenzione e sicurezza in quota
+## Manutenzione e sicurezza in quota
 
 **[Pulizia, manutenzione e installazione canne fumarie](#)** — Verifica, pulizia e installazione di canne fumarie in quota, essenziali per il corretto funzionamento di stufe e caminetti.
 
@@ -31,7 +31,7 @@ Zero permessi comunali per il ponteggio, zero ingombro a terra, zero disagi per 
 
 **[Rimozione materiale pericolante su fune](#)** — Intervento rapido su intonaci, cornicioni o parti dell'edificio a rischio caduta, per mettere in sicurezza lo stabile in tempi brevi.
 
-### Pulizia e cura del verde
+## Pulizia e cura del verde
 
 **[Potatura alberi](#)** — Potatura di alberi ad alto fusto anche in spazi stretti o difficili da raggiungere con mezzi tradizionali.
 
@@ -41,7 +41,7 @@ Zero permessi comunali per il ponteggio, zero ingombro a terra, zero disagi per 
 
 **[Pulizia vetri](#)** — Pulizia di vetrate e infissi di palazzi ed edifici alti, con accesso diretto su fune ai punti piu complessi.
 
-### Ristrutturazione ed estetica
+## Ristrutturazione ed estetica
 
 **[Ristrutturazioni balconi e facciate](#)** — Ripristino di intonaci, cornicioni e facciate degradate, riportando l'edificio al suo stato originario.
 

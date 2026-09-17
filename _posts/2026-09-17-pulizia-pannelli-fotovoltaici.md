@@ -13,14 +13,14 @@ Polvere, smog, resina degli alberi e depositi di polline riducono la resa di un 
 
 Puliamo i pannelli lavorando su fune, con acqua demineralizzata e spazzole morbide che non graffiano il vetro, senza dover montare ponteggi o bloccare l'impianto per giorni.
 
-### Quando farlo
+## Quando farlo
 
 - Impianti installati da piu di un anno mai puliti
 - Zone vicine a strade trafficate, campagne o alberi
 - Cali di produzione evidenti rispetto ai dati di installazione
 - Prima di una manutenzione o verifica dell'impianto
 
-### Il nostro metodo
+## Il nostro metodo
 
 Saliamo in sicurezza sul tetto, laviamo pannello per pannello con acqua pura (niente detergenti aggressivi che lascino residui) e controlliamo visivamente lo stato di celle e cablaggi mentre siamo li. Intervento rapido, in genere completato in poche ore anche per impianti di medie dimensioni.
 

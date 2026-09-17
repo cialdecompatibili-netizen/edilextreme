@@ -13,14 +13,14 @@ Grandi vetrate, finestre panoramiche, facciate continue: piu un edificio e alto 
 
 Puliamo vetri e vetrate lavorando su fune, con accesso diretto a ogni superficie senza bisogno di mezzi ingombranti.
 
-### Dove interveniamo
+## Dove interveniamo
 
 - Facciate vetrate di uffici e edifici commerciali
 - Finestre di condomini e attici
 - Lucernari e coperture in vetro
 - Vetrine e insegne luminose
 
-### Vantaggi rispetto ai metodi tradizionali
+## Vantaggi rispetto ai metodi tradizionali
 
 Lavoriamo con acqua osmotizzata e aste telescopiche dove possibile, corde e imbracature dove serve raggiungere punti piu complessi. Il risultato e un vetro pulito senza aloni, senza bisogno di chiudere strade o marciapiedi per posizionare mezzi.
 

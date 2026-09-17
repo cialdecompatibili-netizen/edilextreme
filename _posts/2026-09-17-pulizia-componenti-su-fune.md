@@ -13,14 +13,14 @@ Facciate ventilate, insegne pubblicitarie, sottotetti, canaline tecniche, impian
 
 Interveniamo su fune per pulire, sgrassare o igienizzare qualsiasi elemento esterno, senza montare ponteggi e senza bloccare l'accesso all'edificio.
 
-### Cosa puliamo
+## Cosa puliamo
 
 - Facciate in vetro, alluminio o pietra
 - Insegne e cartellonistica in quota
 - Grate, cancellate e strutture metalliche esterne
 - Componenti tecnici su tetti e coperture
 
-### Perche scegliere il lavoro su fune
+## Perche scegliere il lavoro su fune
 
 Un ponteggio per una pulizia occasionale ha costi e tempi che spesso non hanno senso. Con le tecniche di accesso su corda arriviamo dove serve in poche ore, lavoriamo in sicurezza e lasciamo la zona come l'abbiamo trovata, senza impalcature che restano per settimane.
 

@@ -13,14 +13,14 @@ Quando un albero e troppo alto, troppo vicino a cavi elettrici o a una facciata,
 
 Lavoriamo in tree climbing: saliamo con corde e imbracature certificate, senza appoggiare nulla sulla pianta che possa danneggiarla, e tagliamo solo dove serve.
 
-### Quando conviene
+## Quando conviene
 
 - Alberi alti in giardini stretti o cortili condominiali
 - Piante vicine a linee elettriche o tetti
 - Potature di contenimento o messa in sicurezza dopo maltempo
 - Abbattimenti controllati in spazi ristretti, smontando la pianta pezzo per pezzo
 
-### Come lavoriamo
+## Come lavoriamo
 
 Il tecnico sale con doppia sicura, valuta i rami da rimuovere e lavora dall'alto verso il basso, calando il legname con corde per non far cadere nulla in modo incontrollato. L'area di lavoro viene delimitata e il materiale di risulta smaltito o triturato a fine intervento.
 
