@@ -177,6 +177,8 @@ body { font-size: calc(1rem * var(--t-font-scale)); }
   padding-left: 20px;
 }
 .article-auto-toc li { margin: 4px 0; font-size: 14px; }
+.article-auto-toc ol ol { list-style-type: lower-roman; margin: 4px 0 4px 0; padding-left: 18px; }
+.article-auto-toc ol ol li { font-size: 13px; }
 .article-auto-toc a { color: var(--t-link, #6c63ff); text-decoration: none; }
 .article-auto-toc a:hover { text-decoration: underline; }
 </style>
@@ -418,11 +420,11 @@ document.addEventListener('DOMContentLoaded', function(){
   })();
 
   // --- INDICE AUTOMATICO stile Wikipedia (riattivato 17/09/2026) ---
-  // Scatta da solo quando l'articolo ha almeno 3 H2 (solo H2, gli H3 non contano).
+  // Scatta da solo quando l'articolo ha almeno 3 titoli (H2 + H3), H3 annidati sotto l'H2.
   (function(){
     var content = document.querySelector('.page__content');
     if (!content) return;
-    var headings = content.querySelectorAll('h2');
+    var headings = Array.prototype.slice.call(content.querySelectorAll('h2, h3'));
     if (headings.length < 3) return;
 
     var toc = document.createElement('nav');
@@ -433,6 +435,7 @@ document.addEventListener('DOMContentLoaded', function(){
     toc.appendChild(title);
 
     var ol = document.createElement('ol');
+    var subList = null, lastTopLi = null;
     headings.forEach(function(h){
       if (!h.id) {
         h.id = h.textContent.trim().toLowerCase()
@@ -444,12 +447,18 @@ document.addEventListener('DOMContentLoaded', function(){
       a.href = '#' + h.id;
       a.textContent = h.textContent.trim();
       li.appendChild(a);
-      ol.appendChild(li);
+      if (h.tagName === 'H2' || !lastTopLi) {
+        ol.appendChild(li);
+        if (h.tagName === 'H2') { lastTopLi = li; subList = null; }
+      } else {
+        if (!subList) { subList = document.createElement('ol'); lastTopLi.appendChild(subList); }
+        subList.appendChild(li);
+      }
     });
     toc.appendChild(ol);
 
-    var firstH2 = headings[0];
-    firstH2.parentNode.insertBefore(toc, firstH2);
+    var first = headings[0];
+    first.parentNode.insertBefore(toc, first);
   })();
 
   // --- DROPDOWN SHOP (generato da _data/shop_nav.yml via Liquid) ---
