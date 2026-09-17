@@ -1,12 +1,13 @@
-import sys
-sys.path.insert(0, r"C:\Users\mirco\Desktop\cmspush_multisite")
-from publish import pubblica_articolo
+---
+layout: single
+title: "Impermeabilizzazione su fune"
+date: 2026-09-17
+excerpt: "Interventi di impermeabilizzazione di terrazzi, balconi, tetti e cornicioni con tecnica su fune: niente ponteggi, tempi rapidi, risparmio concreto."
+categories:
+  - servizi
+---
 
-titolo = "Impermeabilizzazione su fune"
-categoria = "servizi"
-excerpt = "Interventi di impermeabilizzazione di terrazzi, balconi, tetti e cornicioni con tecnica su fune: niente ponteggi, tempi rapidi, risparmio concreto."
-
-corpo = r"""L'acqua e uno dei principali nemici di ogni edificio. Infiltrazioni non trattate in tempo penetrano nel cemento, corrodono i ferri d'armatura e, con il passare delle stagioni, trasformano un piccolo difetto della copertura in un danno strutturale costoso da riparare.
+L'acqua e uno dei principali nemici di ogni edificio. Infiltrazioni non trattate in tempo penetrano nel cemento, corrodono i ferri d'armatura e, con il passare delle stagioni, trasformano un piccolo difetto della copertura in un danno strutturale costoso da riparare.
 
 EdilExtreme esegue interventi di impermeabilizzazione di terrazzi, balconi, tetti e cornicioni operando su fune, senza montare ponteggi ne impalcature. I nostri tecnici raggiungono direttamente il punto da trattare calandosi dall'alto, con un risparmio netto su tempi e costi rispetto ai cantieri tradizionali.
 
@@ -22,6 +23,4 @@ Non serve aspettare che compaiano macchie di umidita in casa per agire. I segnal
 
 Zero ponteggi significa zero permessi comunali, zero ingombro sul marciapiede o in cortile, e un cantiere che si chiude in tempi molto piu rapidi. I nostri operatori sono formati con corsi di alpinismo e speleologia e lavorano sempre in sicurezza, anche sui punti piu difficili da raggiungere con i metodi tradizionali.
 
-Richiedi un sopralluogo gratuito: valutiamo insieme lo stato della tua copertura e ti prepariamo un preventivo chiaro, senza impegno."""
-
-pubblica_articolo("edilextreme", titolo, categoria, excerpt, corpo)
+Richiedi un sopralluogo gratuito: valutiamo insieme lo stato della tua copertura e ti prepariamo un preventivo chiaro, senza impegno.
