@@ -40,11 +40,26 @@ layout: default
         </header>
       {% endunless %}
 
+      {%- comment -%}
+        Indice (TOC) automatico e universale: nessun flag manuale nel front-matter.
+        Conta gli heading H2 markdown (##) nel contenuto grezzo del post/pagina;
+        se sono 3 o piu, mostra il TOC nativo del tema. Vale per qualsiasi articolo
+        (esistente o futuro) su qualsiasi layout "single" del sito.
+        page.toc: false nel front-matter forza comunque la disattivazione (escape hatch).
+      {%- endcomment -%}
+      {% assign h2_count = content | split: '<h2' | size | minus: 1 %}
+      {% assign show_toc = false %}
+      {% if page.toc == false %}
+        {% assign show_toc = false %}
+      {% elsif page.toc == true or h2_count >= 3 %}
+        {% assign show_toc = true %}
+      {% endif %}
+
       <section class="page__content e-content" itemprop="text">
-        {% if page.toc %}
+        {% if show_toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc" aria-label="Table of contents">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[locale].toc_label | default: "On this page" }}</h4></header>
+              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'list' }}"></i> {{ page.toc_label | default: site.data.ui-text[locale].toc_label | default: "Indice" }}</h4></header>
               {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
           </aside>
